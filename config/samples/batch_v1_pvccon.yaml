@@ -1,0 +1,7 @@
+apiVersion: batch.example.com/v1
+kind: PvcCon
+metadata:
+  name: pvccon-sample
+spec:
+  # Add fields here
+  foo: bar

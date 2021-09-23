@@ -1,0 +1,24 @@
+# permissions for end users to edit pvccons.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pvccon-editor-role
+rules:
+- apiGroups:
+  - batch.example.com
+  resources:
+  - pvccons
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.example.com
+  resources:
+  - pvccons/status
+  verbs:
+  - get
